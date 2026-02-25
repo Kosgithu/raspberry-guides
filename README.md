@@ -11,6 +11,8 @@ Partager des solutions à des problèmes réels rencontrés sur Raspberry Pi, av
 | Guide | Description | Catégorie |
 |-------|-------------|-----------|
 | [Capture d'écran Wayland](guides/capture-ecran-wayland.md) | Résoudre les problèmes de capture sur Raspberry Pi OS moderne | Système |
+| [Commandes Terminal](guides/commandes-terminal.md) | Référentiel des commandes Linux essentielles | Système |
+| [Hugging Face Inference API](guides/huggingface-inference-api.md) | Utiliser l'API Hugging Face pour l'IA | IA/API |
 
 ## 🛠️ Technologies couvertes
 
