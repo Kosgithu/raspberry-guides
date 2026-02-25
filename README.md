@@ -13,6 +13,7 @@ Partager des solutions à des problèmes réels rencontrés sur Raspberry Pi, av
 | [Capture d'écran Wayland](guides/capture-ecran-wayland.md) | Résoudre les problèmes de capture sur Raspberry Pi OS moderne | Système |
 | [Commandes Terminal](guides/commandes-terminal.md) | Référentiel des commandes Linux essentielles | Système |
 | [Hugging Face Inference API](guides/huggingface-inference-api.md) | Utiliser l'API Hugging Face pour l'IA | IA/API |
+| [Raspberry Pi 5 NVMe Setup](guides/raspberry-pi-5-nvme-setup.md) | Configuration complète Pi 5 + SSD NVMe | Hardware |
 
 ## 🛠️ Technologies couvertes
 
