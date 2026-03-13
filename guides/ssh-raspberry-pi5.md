@@ -179,6 +179,52 @@ sftp oimadi@192.168.1.79
 
 ---
 
+### 🍎 Partage SMB/Samba (depuis Mac)
+
+Pour un partage réseau simple visible dans le Finder Mac :
+
+**Configuration sur le Raspberry Pi :**
+```bash
+# Créer le dossier de partage
+mkdir -p ~/Desktop/Partage-Mac
+
+# Installer Samba
+sudo apt install -y samba
+
+# Configurer le partage
+sudo tee -a /etc/samba/smb.conf << 'EOF'
+
+[Partage-Mac]
+   comment = Partage depuis Mac
+   path = /home/oimadi/Desktop/Partage-Mac
+   browseable = yes
+   read only = no
+   writable = yes
+   valid users = oimadi
+   create mask = 0775
+   directory mask = 0775
+EOF
+
+# Créer l'utilisateur Samba (même nom que Linux)
+sudo smbpasswd -a oimadi
+# Entrer le mot de passe : oimadi
+
+# Redémarrer Samba
+sudo systemctl restart smbd nmbd
+```
+
+**Accès depuis Mac :**
+1. Dans le Finder, appuie sur **Cmd + K**
+2. Tape : `smb://192.168.1.79`
+3. Entre :
+   - Nom d'utilisateur : `oimadi`
+   - Mot de passe : `oimadi`
+4. Sélectionne **Partage-Mac**
+
+**Alternative :** Le dossier apparaît automatiquement dans **Emplacements** du Finder sous "Kospy" ou "Raspberry Pi".
+
+---
+
 ## 🔗 Tunnels et Redirections de Ports
 
 ### Tunnel SSH (Sécuriser VNC)
